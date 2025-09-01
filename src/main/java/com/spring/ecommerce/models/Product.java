@@ -11,7 +11,7 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String title;
     private String description;
@@ -27,8 +27,8 @@ public class Product {
     private List<Category> categories;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+    @JoinColumn(name = "seller_id", referencedColumnName = "id")
+    private Seller seller;
 
 
     @OneToOne(optional = false)

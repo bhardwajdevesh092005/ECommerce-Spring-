@@ -9,7 +9,7 @@ import lombok.Data;
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
@@ -22,4 +22,5 @@ public class OrderItem {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     private Order order;
-    private int quantity;}
+    private int quantity;
+}

@@ -29,16 +29,4 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "seller_id", referencedColumnName = "id")
     private Seller seller;
-
-
-    @OneToOne(optional = false)
-    private CartItem cartItem;
-
-    public CartItem getCartItem() {
-        return cartItem;
-    }
-
-    public void setCartItem(CartItem cartItem) {
-        this.cartItem = cartItem;
-    }
 }
